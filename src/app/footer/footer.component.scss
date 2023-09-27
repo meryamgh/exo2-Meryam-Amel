@@ -1,42 +1,20 @@
 footer {
-  bottom: 0;
   background-color: #DED6C0;
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Style pour les liens <a> */
-footer a {
-  text-decoration: none; /* Supprimer la soulignement du lien */
-  color: #007bff; /* Couleur du texte par défaut */
-  transition: color 0.3s; /* Transition de couleur du texte au survol */
-  margin-right: 20px; /* Marge entre les liens */
-}
 
-footer a:hover {
-  color: #0056b3; /* Couleur du texte au survol */
-}
-
-/* Style pour le bouton */
-footer button {
-  background-color: #58301d; /* Couleur de fond du bouton */
-  color: #fff; /* Couleur du texte du bouton */
+footer a button {
+  background-color: #8D8673;;
+  color: #fff;
   border: none;
-  border-radius: 3px;
   padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Transition de couleur de fond au survol */
 }
 
-footer button:hover {
-  background-color: #0056b3; /* Couleur de fond au survol */
-}
-
-/* Marge entre le bouton et le premier lien */
-footer button + a {
-  margin-left: 20px;
+footer a button:hover {
+  background-color: #544242;
 }

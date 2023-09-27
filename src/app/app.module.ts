@@ -7,6 +7,10 @@ import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { GestionComponent } from './gestion/gestion.component';
+import {ListComponent} from "./list/list.component";
+import {HeaderComponent} from "./header/header.component";
+import {BodyComponent} from "./body/body.component";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { GestionComponent } from './gestion/gestion.component';
     FooterComponent,
     FormComponent,
     GestionComponent,
+    BodyComponent,
+    HeaderComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
