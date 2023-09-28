@@ -10,7 +10,7 @@
 
     <label for="email">Email</label>
   <input type="checkbox" (click)="doCheck()" [checked]="isChecked">
-  <input *ngIf="isChecked" type="text" id="email" formControlName="email" name="email">
+  <input *ngIf="!isChecked" type="text" id="email" formControlName="email" name="email">
 
   <label for="commentaire">Commentaires</label>
     <textarea name="commentaire" formControlName="commentaire" id="commentaire"></textarea>

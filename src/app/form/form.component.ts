@@ -15,7 +15,7 @@ export class FormComponent{
       prenom : new FormControl('', [Validators.required]),
       nom : new FormControl('', [Validators.required]),
       age : new FormControl('', [Validators.required]),
-      email : new FormControl(''),
+      email : new FormControl('',[Validators.required, Validators.email]),
       commentaire: new FormControl('', [Validators.required]),
 
     }
@@ -32,8 +32,7 @@ export class FormComponent{
 
   doCheck() {
     this.isChecked = !this.isChecked;
-
-    if (this.isChecked) {
+    if (!this.isChecked) {
       this.contactForm.get('email')?.setValidators([Validators.required, Validators.email]);
     } else {
       this.contactForm.get('email')?.clearValidators();
