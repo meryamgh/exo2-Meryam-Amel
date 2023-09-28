@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {FormDataService} from "../services/form-data.service";
+import {User} from "../model/user.model";
 
 @Component({
   selector: 'app-form',
@@ -23,12 +24,12 @@ export class FormComponent {
     }
   );
 
-  constructor(private router: Router, private dataToSend: FormDataService) {
+  constructor(private router: Router, private dataToSendService: FormDataService) {
   }
 
   public sendCommentaire() {
     alert("Le formulaire est valide");
-    this.dataToSend.setLastForm(this.contactForm);
+    this.dataToSendService.setLastForm(new User().deserialize(this.contactForm.value));
     this.router.navigate(['/']);
   }
 
@@ -38,6 +39,7 @@ export class FormComponent {
       this.contactForm.get('email')?.setValidators([Validators.required, Validators.email]);
     } else {
       this.contactForm.get('email')?.clearValidators();
+      this.contactForm.get('email')?.reset('');
     }
     this.contactForm.get('email')?.updateValueAndValidity();
   }
