@@ -8,29 +8,31 @@ import {FormDataService} from "../services/form-data.service";
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent{
-  public isChecked:boolean = false;
+export class FormComponent {
+
+  public isChecked: boolean = false;
+
   public contactForm = new FormGroup(
     {
-      prenom : new FormControl('', [Validators.required]),
-      nom : new FormControl('', [Validators.required]),
-      age : new FormControl('', [Validators.required]),
-      email : new FormControl('',[Validators.required, Validators.email]),
+      prenom: new FormControl('', [Validators.required]),
+      nom: new FormControl('', [Validators.required]),
+      age: new FormControl(''),
+      email: new FormControl('', [Validators.required, Validators.email]),
       commentaire: new FormControl('', [Validators.required]),
 
     }
-
   );
 
-  constructor(private router: Router,private dataToSend: FormDataService) { }
+  constructor(private router: Router, private dataToSend: FormDataService) {
+  }
 
-  sendCommentaire(){
+  public sendCommentaire() {
     alert("Le formulaire est valide");
     this.dataToSend.setLastForm(this.contactForm);
     this.router.navigate(['/']);
   }
 
-  doCheck() {
+  public doCheck() {
     this.isChecked = !this.isChecked;
     if (!this.isChecked) {
       this.contactForm.get('email')?.setValidators([Validators.required, Validators.email]);
@@ -39,6 +41,5 @@ export class FormComponent{
     }
     this.contactForm.get('email')?.updateValueAndValidity();
   }
-
 
 }

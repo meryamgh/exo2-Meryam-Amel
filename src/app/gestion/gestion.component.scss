@@ -1,40 +1,36 @@
-/* Styles pour le conteneur principal */
 .data {
-  background-color: #f0f0f0;
+  background-color: #F1EDE1;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/* Styles pour le contenu centré */
 #center-content {
   text-align: center;
 }
 
-/* Styles pour les informations du formulaire */
 .centered-content {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   padding: 20px;
   width: 400px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .centered-content h1 {
-  font-size: 28px; /* Augmenter la taille de la police */
+  font-size: 28px;
   color: #333;
 }
 
 .centered-content p {
-  font-size: 20px; /* Augmenter la taille de la police */
-  margin: 12px 0; /* Ajuster les marges */
+  font-size: 20px;
+  margin: 12px 0;
   color: #555;
 }
 
-/* Styles pour le message "404 Not Found" */
 #noData p {
-  font-size: 28px; /* Augmenter la taille de la police */
-  color: #ff0000; /* Rouge */
+  font-size: 35px;
+  color: #ff0000;
   font-weight: bold;
 }

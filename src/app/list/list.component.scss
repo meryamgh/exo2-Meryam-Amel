@@ -1,5 +1,6 @@
 .liste {
   text-align: center;
+  height: 100vh;
 }
 
 .liste li {
@@ -7,13 +8,12 @@
 }
 
 .liste ul {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 .infos-film {
   text-align: center;
-  margin-top: 20px;
 }
 
 .infos-film img {

@@ -4,9 +4,8 @@
       <a (click)="afficherFilm(film)">{{ film.titre_film }}</a>
     </li>
   </ul>
-</div>
-
-<div class="infos-film" *ngIf="film">
-  <h2>{{ film.titre_film }}</h2>
-  <img [src]="film.affiche_film" alt="{{ film.titre_film }} Affiche">
+  <div class="infos-film" *ngIf="film">
+    <h2>{{ film.titre_film }}</h2>
+    <img [src]="film.affiche_film" alt="{{ film.titre_film }} Affiche">
+  </div>
 </div>

@@ -8,14 +8,14 @@ import {FormDataService} from "../services/form-data.service";
   styleUrls: ['./gestion.component.scss']
 })
 export class GestionComponent implements OnInit {
+
   public getLastFormData: any = null ;
 
   constructor(private formService: FormDataService) {
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.getLastFormData = this.formService.getMessage();
-    console.log(this.getLastFormData);
   }
 
 }

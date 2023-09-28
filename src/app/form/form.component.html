@@ -1,19 +1,23 @@
-<form [formGroup]="contactForm" (ngSubmit)="sendCommentaire()" >
+<form [formGroup]="contactForm" (ngSubmit)="sendCommentaire()">
+
   <fieldset>
+
     <legend>Formulaire</legend>
-  <label for="prenom">Prenom</label>
-  <input type="text" id="prenom" formControlName="prenom" name="prenom">
-  <label for="nom">Nom</label>
-  <input type="text" id="nom" formControlName="nom" name="nom">
-  <label for="age">Age</label>
-  <input type="number" id="age" name="age" formControlName="age">
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" formControlName="prenom" name="prenom">
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" formControlName="nom" name="nom">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" formControlName="age">
 
     <label for="email">Email</label>
-  <input type="checkbox" (click)="doCheck()" [checked]="isChecked">
-  <input *ngIf="!isChecked" type="text" id="email" formControlName="email" name="email">
+    <input type="checkbox" (click)="doCheck()" [checked]="isChecked">
+    <input *ngIf="!isChecked" type="text" id="email" formControlName="email" name="email">
 
-  <label for="commentaire">Commentaires</label>
+    <label for="commentaire">Commentaires</label>
     <textarea name="commentaire" formControlName="commentaire" id="commentaire"></textarea>
     <input type="submit" value="Envoyer" [disabled]="contactForm.invalid">
+
   </fieldset>
+
 </form>
