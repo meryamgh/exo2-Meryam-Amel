@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormDataService} from "../services/form-data.service";
-import {User} from "../model/user.model";
+import {FormDataService} from "../../services/form-data.service";
+import {User} from "../../model/user.model";
 
 
 @Component({
@@ -15,7 +15,7 @@ export class GestionComponent implements OnInit {
   constructor(private formService: FormDataService) {
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     console.log(this.getLastFormData?.email);
     this.getLastFormData = this.formService.getMessage();
   }

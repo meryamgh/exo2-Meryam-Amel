@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {FormDataService} from "../services/form-data.service";
-import {User} from "../model/user.model";
+import {FormDataService} from "../../services/form-data.service";
+import {User} from "../../model/user.model";
 
 @Component({
   selector: 'app-form',

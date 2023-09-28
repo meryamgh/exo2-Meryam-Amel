@@ -1,15 +1,12 @@
-import {Deserializable} from "./deserializable.model";
+export class User {
+ "nom": string;
+ "prenom" : string;
+ "age" : bigint;
+ "email" : string;
+ "commentaire" : string;
 
-export class User implements Deserializable {
-  'prenom' : string;
-  'nom' : number;
-  'age' : bigint;
-  'email' : string;
-  'commentaire' : string;
-
-
-  deserialize(input: any) {
-    Object.assign(this, input);
-    return this;
-  }
+ public deserialize(input : any) {
+  Object.assign(this, input);
+  return this;
+ }
 }
