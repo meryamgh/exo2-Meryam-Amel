@@ -16,7 +16,6 @@ export class GestionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.getLastFormData?.email);
     this.getLastFormData = this.formService.getMessage();
   }
 

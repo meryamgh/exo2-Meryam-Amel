@@ -29,7 +29,16 @@ export class FormComponent {
 
   public sendCommentaire() {
     alert("Le formulaire est valide");
-    this.dataToSendService.setLastForm(new User().deserialize(this.contactForm.value));
+    const user = new User();
+    const age = this.contactForm.get('age')?.value;
+    user.nom = this.contactForm.get('nom')?.value ?? '';
+    user.prenom = this.contactForm.get('prenom')?.value ?? '';
+    user.age = age ? Number(age) : null;
+
+    user.email = this.contactForm.get('email')?.value ?? '';
+    user.commentaire = this.contactForm.get('commentaire')?.value ?? '';
+
+    this.dataToSendService.setLastForm(user);
     this.router.navigate(['/']);
   }
 
