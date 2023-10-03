@@ -10,14 +10,14 @@ import {User} from "../../model/user.model";
 })
 export class GestionComponent implements OnInit {
 
-  public getLastFormData: User | null = null ;
+  public getLastFormData: User | null = null;
 
   constructor(private formService: FormDataService) {
   }
 
   ngOnInit(): void {
     console.log(this.getLastFormData?.email);
-    this.getLastFormData = this.formService.getMessage();
+    this.getLastFormData = this.formService.lastForm;
   }
 
 }

@@ -29,7 +29,7 @@ export class FormComponent {
 
   public sendCommentaire() {
     alert("Le formulaire est valide");
-    this.dataToSendService.setLastForm(new User().deserialize(this.contactForm.value));
+    this.dataToSendService.lastForm = (new User().deserialize(this.contactForm.value));
     this.router.navigate(['/']);
   }
 
